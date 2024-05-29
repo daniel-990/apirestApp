@@ -21,8 +21,8 @@ public class ProductoController {
     @GetMapping("/productos")
     public List<Producto> getAllProductos() {
         //return productoRepository.findAll();
-        return jdbcTemplate.query("SELECT id, nombre, precio FROM producto", (rs, rowNum) ->
-                new Producto(rs.getLong("id"), rs.getString("nombre"),rs.getBigDecimal("precio")));
+        return jdbcTemplate.query("SELECT * FROM producto", (rs, rowNum) ->
+                new Producto(rs.getLong("id"), rs.getString("nombre"), rs.getBigDecimal("precio")));
 
     }
 
