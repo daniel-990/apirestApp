@@ -9,6 +9,9 @@
         .container{
             margin-top:10rem;
         }
+        a{
+            text-decoration: none !important;
+        }
     </style>
 </head>
 <body>
@@ -17,8 +20,57 @@
         <hr>
         <code>
             <ul>
-                <li><a href="http://localhost:8081/productos" target="productos">/productos</a></li>
-                <li><a href="http://localhost:8081/items" target="items">/items</a></li>
+                <li>
+                    <span class="badge text-bg-warning">GET</span>
+                    <a href="http://localhost:8081/productos" target="productos"> /productos/{id}</a>
+                    <hr>
+                    <ul>
+                        <li><code><b>ejm:</b> http://localhost:8081/productos/5</code></li>
+                    </ul>
+                    <hr>
+                </li>
+                <li><span class="badge text-bg-warning">GET</span><a href="http://localhost:8081/productos" target="productos"> /productos</a></li>
+                <li><span class="badge text-bg-warning">GET</span><a href="http://localhost:8081/items" target="items"> /items</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="badge text-bg-danger">POST</span>
+                    <a href="http://localhost:8081/productos" target="productos"> /productos</a>
+                    <hr>
+                    <ul>
+                        <li>
+                            <code class="code">
+                                {
+                                <br>
+                                    "nombre": "nombre ejm",
+                                    <br>
+                                    "precio": 0.1
+                                <br>
+                                }
+                            </code>
+                        </li>
+                    </ul>
+                    <hr>
+                </li>
+                <li>
+                    <span class="badge text-bg-danger">POST</span>
+                    <a href="http://localhost:8081/items" target="items"> /items</a>
+                    <hr>
+                    <ul>
+                        <li>
+                            <code class="code">
+                                {
+                                <br>
+                                "nombre": "nombre ejm",<br>
+                                "comentario": "comentario ejm",<br>
+                                "precio": 000,<br>
+                                "cantidad": 000<br>
+                                }
+                            </code>
+                        </li>
+                    </ul>
+                    <hr>
+                </li>
             </ul>
         </code>
     </div>

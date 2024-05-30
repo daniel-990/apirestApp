@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service
 public class ProductoService {
-
     private final JdbcTemplate jdbcTemplate;
 
     public ProductoService(JdbcTemplate jdbcTemplate) {
@@ -41,4 +40,3 @@ public class ProductoService {
         jdbcTemplate.update("DELETE FROM productos WHERE id = ?", id);
     }
 }
-
